@@ -10,6 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import SchoolIcon from '@mui/icons-material/School';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
@@ -49,16 +50,17 @@ export const Profile = () => {
                             '& > :not(style)': { m: 1 },
                         }}
                     >
-                        <TextField className="w-80"
+                        <TextField className="w-80 " InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
                             helperText=""
                             id="demo-helper-text-aligned"
                             label="Name"
+                            defaultValue="  Nisarg Gogate"
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <AccountCircle />
+                                        <AccountCircle style={{ color: "#6495ED" }} />
                                     </InputAdornment>
-                                ),
+                                ), style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
                             }}
                         />
                     </Box>
@@ -71,17 +73,33 @@ export const Profile = () => {
                         }}
 
                     >
-                        <TextField className="w-80"
+                        <TextField
+                            className="w-80"
+                            InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
                             helperText=""
                             id="demo-helper-text-aligned"
                             label="Email"
+                            defaultValue=" nisarg0@gmail.com "
                             InputProps={{
                                 startAdornment: (
+
                                     <InputAdornment position="start">
-                                        <EmailIcon />
+                                        <EmailIcon style={{ color: "#6495ED" }} />
                                     </InputAdornment>
+
+
                                 ),
+                                endAdornment: (
+
+                                    <InputAdornment position="end">
+                                        <VerifiedIcon style={{ color: "#000e41" }} />
+                                    </InputAdornment>
+
+
+                                ), style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
                             }}
+
+
                         />
 
                     </Box>
@@ -98,16 +116,17 @@ export const Profile = () => {
                         }}
 
                     >
-                        <TextField className="w-80"
+                        <TextField className="w-80" InputLabelProps={{ style: { fontSize: 20, color: "#6495ED" } }}
                             helperText=""
                             id="demo-helper-text-aligned"
                             label="College"
+                            defaultValue="   VNIT  Nagpur "
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <SchoolIcon />
+                                        <SchoolIcon style={{ color: "#6495ED" }} />
                                     </InputAdornment>
-                                ),
+                                ), style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
                             }}
                         />
 
@@ -124,16 +143,28 @@ export const Profile = () => {
                         }}
 
                     >
-                        <TextField className="w-80"
+                        <TextField className="w-80" fontWeight="bold" InputLabelProps={{ style: { fontSize: 20, color: "#6495ED" } }}
                             helperText=""
                             id="demo-helper-text-aligned"
                             label="Phone Number"
+                            defaultValue="  9197654534 "
+
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <PhoneAndroidIcon />
+                                        <PhoneAndroidIcon style={{ color: "#6495ED" }} />
                                     </InputAdornment>
                                 ),
+                                endAdornment: (
+
+                                    <InputAdornment position="end">
+                                        <VerifiedIcon style={{ color: "#000e41" }} />
+                                    </InputAdornment>
+
+
+                                ), inputMode: 'numeric', pattern: '[0-9]*', style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
+
+
                             }}
                         />
 
