@@ -11,8 +11,18 @@ import SchoolIcon from '@mui/icons-material/School';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import VerifiedIcon from '@mui/icons-material/Verified';
+import WorkIcon from '@mui/icons-material/Work';
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import HomeIcon from '@mui/icons-material/Home';
+import RoomIcon from '@material-ui/icons/Room';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CakeIcon from '@mui/icons-material/Cake';
+import WcIcon from '@mui/icons-material/Wc';
+import { SocialIcon } from 'react-social-icons';
 
 export const Profile = () => {
     return (
@@ -24,13 +34,39 @@ export const Profile = () => {
                             <div className="flex flex-wrap justify-center">
                                 <div className="w-6/12 sm:w-4/12 px-4">
                                     <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFutmesJUgeYw/profile-displayphoto-shrink_800_800/0/1591826524520?e=1642636800&v=beta&t=x4ihw3UTDk5yheqEH85SseP563tsQxioQOzstNA2688" alt="..." className="shadow rounded max-w-full h-auto align-middle border-none" />
+
+                                    <div className="flex justify-center mt-5">
+
+
+                                        <i className="fa fa-facebook text-blue-900 text-xl mr-2" /><FacebookIcon style={{ color: "#3b5998" }} />
+                                        <i className="fa fa-twitter text-blue-300 text-xl mr-2" /> <TwitterIcon style={{ color: "#55acee" }} />
+                                        <i className="fa fa-linkedin text-blue-900 text-xl mr-2" /> <GitHubIcon style={{ color: "#333333" }} />
+                                        <i className="fa fa-instagram text-red-700 text-xl mr-2" /> <LinkedInIcon style={{ color: "#0077b5" }} />
+
+                                    </div>
+
+
+
+
+
+
+
                                 </div>
                             </div>
 
                         </p>
+
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -104,10 +140,6 @@ export const Profile = () => {
 
                     </Box>
 
-
-
-
-
                     <Box className="flex justify-center"
                         sx={{
                             display: 'flex',
@@ -131,9 +163,6 @@ export const Profile = () => {
                         />
 
                     </Box>
-
-
-
 
                     <Box className="flex justify-center"
                         sx={{
@@ -169,6 +198,120 @@ export const Profile = () => {
                         />
 
                     </Box>
+
+
+                    <Box className="flex justify-center"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            '& > :not(style)': { m: 1 },
+                        }}
+                    >
+                        <TextField className="w-80 " InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
+                            helperText=""
+                            id="demo-helper-text-aligned"
+                            label="BirthDay"
+                            defaultValue="  "
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <CakeIcon style={{ color: "#6495ED" }} />
+                                    </InputAdornment>
+                                ), inputMode: 'date', style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
+                            }}
+                        />
+                    </Box>
+
+
+
+                    <Box className="flex justify-center"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            '& > :not(style)': { m: 1 },
+                        }}
+                    >
+                        <TextField className="w-80 " InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
+                            helperText=""
+                            id="demo-helper-text-aligned"
+                            label="Gender"
+                            defaultValue="  "
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <WcIcon style={{ color: "#6495ED" }} />
+                                    </InputAdornment>
+                                ), inputMode: 'date', style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
+                            }}
+                        />
+                    </Box>
+
+
+
+
+
+
+
+
+
+
+                    <Box className="flex justify-center"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            '& > :not(style)': { m: 1 },
+                        }}
+                    >
+                        <TextField
+                            // onChange={e => e}
+                            multiline={true}
+                            rows={4}
+                            className=" w-80   " InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
+                            helperText=""
+                            id="demo-helper-text-aligned"
+                            label="Bio"
+
+                            // value="  Software  Developer"
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <WorkIcon style={{ color: "#6495ED" }} />
+                                    </InputAdornment>
+                                ), style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
+                            }}
+                        />
+                    </Box>
+
+
+
+                    <Box className="flex justify-center"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            '& > :not(style)': { m: 1 },
+                        }}
+                    >
+                        <TextField
+                            // onChange={e => e}
+                            multiline={true}
+                            rows={4}
+                            className=" w-80    " InputLabelProps={{ style: { fontSize: 19, color: "#6495ED" } }}
+                            helperText=""
+                            id="demo-helper-text-aligned"
+                            label="Address"
+
+                            // value="London New York, Baker Street, New York,"
+                            InputProps={{
+
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <HomeIcon style={{ color: "#6495ED" }} />
+                                    </InputAdornment>
+                                ), style: { fontSize: 17, fontWeight: 450, fontStyle: 'bold' }
+                            }}
+                        />
+                    </Box>
+
 
 
 
